@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff4d6d,#ff758f);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+.container{
+padding:30px;
+}
+
+h1{
+font-size:55px;
+animation:fadeIn 2s;
+}
+
+h2{
+margin-top:20px;
+font-size:30px;
+}
+
+p{
+margin-top:20px;
+font-size:20px;
+line-height:1.8;
+max-width:700px;
+}
+
+button{
+margin-top:35px;
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.heart{
+position:absolute;
+color:white;
+font-size:25px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+100%{
+transform:translateY(-120vh);
+opacity:1;
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday ❤️</h1>
+
+<h2>To My Favorite Person</h2>
+
+<p id="message">
+Today is not just your birthday...
+It is the day someone very special came into this world.
+Thank you for every smile, every memory and every moment.
+I wish you endless happiness, success and love.
+Happy Birthday! ❤️
+</p>
+
+<button onclick="surprise()">Click for Surprise 🎁</button>
+
+</div>
+
+<script>
+
+function surprise(){
+alert("❤️ Happy Birthday! ❤️\n\nMay all your dreams come true.\nYou will always have a special place in my heart. 🎂🥳");
+}
+
+function hearts(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+heart.style.fontSize=(Math.random()*25+20)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(hearts,300);
+
+</script>
+
+</body>
+</html>
